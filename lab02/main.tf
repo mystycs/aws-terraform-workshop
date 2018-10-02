@@ -6,6 +6,7 @@ module "server" {
   ami          = "${lookup(var.ami, var.region)}"
   ingress_cidr = "${var.ingress_cidr}"
 }
+  
 module "server-us-east-2" {
   source = "./server"
   region       = "us-east-2"
